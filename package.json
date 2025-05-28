@@ -1,0 +1,36 @@
+{
+  "name": "e-pharmacy-client-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mariia-Ostapets/e-pharmacy-client-backend.git"
+  },
+  "keywords": [],
+  "author": "Mariia Ostapets <mariyaostapets@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Mariia-Ostapets/e-pharmacy-client-backend/issues"
+  },
+  "homepage": "https://github.com/Mariia-Ostapets/e-pharmacy-client-backend#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0",
+    "nodemon": "^3.1.10",
+    "pino-pretty": "^13.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pino-http": "^10.4.0"
+  }
+}
