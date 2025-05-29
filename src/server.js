@@ -4,6 +4,8 @@ import cors from 'cors';
 import { getEnvVar } from './utils/getEnvVar.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
+import cookieParser from 'cookie-parser';
+import router from './routers/index.js';
 
 const PORT = Number(getEnvVar('PORT', '3000'));
 
@@ -13,6 +15,8 @@ export const setupServer = () => {
   app.use(express.json());
 
   app.use(cors());
+
+  app.use(cookieParser());
 
   app.use(
     pino({
@@ -27,6 +31,8 @@ export const setupServer = () => {
       message: 'Welcome to the E-Pharmacy API!',
     });
   });
+
+  app.use(router);
 
   app.use(notFoundHandler);
 
